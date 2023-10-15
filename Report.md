@@ -27,41 +27,22 @@ The `TwoPhaseMulticast` class serves as the central component of the system. It 
 
 ### Experimental Evaluation
 
-### Test Case 1: Minimal Delay
+### Test Case 1: No Delay
+- Simulated in main.py
 - Number of Hosts: 3
-- Number of Messages: 5
-- Random Delays: Minimal (e.g., between 0.1 and 0.2 seconds)
-- Expected Outcome: The total order of messages should closely resemble the real-time order, as there are minimal delays in sending and responding.
+- Number of Messages: 2
 
-### Test Case 2: Significant Delays
+### Test Case 2: Minimum Delay
+- Simulated in test1.py
 - Number of Hosts: 4
-- Number of Messages: 10
-- Random Delays: Significant (e.g., between 0.5 and 1.5 seconds)
-- Expected Outcome: The total order of messages should clearly differ from the real-time order due to significant network latency.
+- Number of Messages: 6
 
-### Test Case 3: Variable Delays
+### Test Case 3: Variable Delay
+- Simulated in test2.py
 - Number of Hosts: 5
 - Number of Messages: 7
-- Random Delays: Variable (e.g., a mix of short and long delays)
-- Expected Outcome: This test case aims to assess the robustness of the algorithm under varying network conditions. The total order should reflect the adjusted order based on commit times.
-
-### Test Case 4: Host Failure
-- Number of Hosts: 3
-- Number of Messages: 6
-- Random Delays: Low
-- Host Failure: Simulate the failure of one host midway through message exchange.
-- Expected Outcome: The algorithm should demonstrate its resilience to host failures and maintain correct total order despite a missing host.
-
-### Test Case 5: Out-of-Order Arrival
-- Number of Hosts: 4
-- Number of Messages: 8
-- Random Delays: Moderate
-- Introduce a scenario where a message with a higher timestamp arrives earlier than a lower-timestamp message.
-- Expected Outcome: The Two-Phase Multicast algorithm should correctly reorder the messages based on commit times, ensuring that the total order is consistent.
-
-These test cases cover various scenarios, including different network conditions, host failures, and out-of-order message arrivals. They aim to validate the correctness and robustness of the Two-Phase Multicast algorithm in achieving total message ordering while handling real-world challenges in a distributed environment.
 
 Experimental results demonstrate the correct functioning of the Two-Phase Multicast algorithm. Messages are delivered, ordered, and printed in total order, as expected.
 
 ### Conclusion
-The implementation of the Two-Phase Multicast algorithm using Python and socket programming successfully achieves total message ordering in a distributed system. The pseudocode has been realized into a functional system with careful consideration of design details. Preliminary experimental evaluation validates the correctness of the system's operation. This implementation serves as a foundational framework for further development and refinement in a distributed environment.
+In conclusion, we have successfully implemented the Two-Phase Multicast algorithm using Python and socket programming to achieve total message ordering in a distributed system. The preliminary experimental evaluation validates the correctness of the system's operation. 
