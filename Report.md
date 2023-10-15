@@ -28,6 +28,12 @@ The implementation closely follows the provided pseudocode. Each host is represe
 
 The `TwoPhaseMulticast` class serves as the central component of the system. It encapsulates data structures and methods for message handling and ordering. The `broadcast` and `receive` methods work together to achieve total message ordering, ensuring that messages are delivered and processed correctly.
 
+### Output Format
+Total Order for Host No j:  ['(S:k,M:0,R:j,T:t)'] 
+- j represents the host number.
+- S: k, here k represents the message sender number
+- T: t, here t represents the time at which message was received. 
+
 ### Experimental Evaluation
 
 ### Test Case 1: No Delay
