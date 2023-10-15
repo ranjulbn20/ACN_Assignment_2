@@ -1,5 +1,8 @@
 ## Report on Two-Phase Multicast Algorithm Implementation
 
+### Name: Ranjul Bandyopadhyay
+### Entry No.: 2023JCS2541
+
 ### Introduction
 This report provides an overview of the implementation of the Two-Phase Multicast algorithm using Python and socket programming. The pseudocode has been realized into a functional system for achieving total message ordering in a distributed environment. The report covers the pseudocode of the algorithm, design details, and preliminary experimental evaluation.
 
